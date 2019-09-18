@@ -22,7 +22,7 @@ class Encrypter
      * @param string $cipher
      * @throws EncryptException
      */
-    public function __construct(string $key, $cipher = 'AES-128-CBC')
+    public function __construct(string $key, string $cipher = 'AES-128-CBC')
     {
         $this->key = $key;
         if (!$this->supported($cipher)) {
@@ -59,7 +59,7 @@ class Encrypter
      * @param $data
      * @return string
      */
-    public function decrypt($data)
+    public function decrypt(string $data)
     {
         list($iv, $value) = explode('$',base64_decode($data));
         $iv = base64_decode($iv);

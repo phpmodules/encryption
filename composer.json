@@ -1,0 +1,22 @@
+{
+    "name": "phpmodules/encryption",
+    "description": "encrypt library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "twn39",
+            "email": "twn39@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "PHPModules\\Encryption\\": "src/"
+        }
+    },
+    "require": {
+        "ext-openssl": "*",
+        "ext-json": "*"
+    }
+}
